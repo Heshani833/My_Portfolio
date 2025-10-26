@@ -41,6 +41,8 @@ body {
   font-weight: 500;
   margin-left: 35px;
   transition: 0.3s;
+  opacity: 0;
+  animation: sideTop 0.5s ease forwards;
 }
 
 .navbar a:hover {
@@ -66,6 +68,9 @@ body {
 .home-content h3 {
   font-size: 32px;
   font-weight: 700;
+  opacity: 0;
+  animation: sideBottom 0.5s ease forwards;
+  animation-delay: 0.7s;
 }
 
 .home-content h3:nth-of-type(2) {
@@ -80,10 +85,15 @@ body {
   font-size: 56px;
   font-weight: 700;
   margin: -3px 0;
+  opacity: 0;
+  animation: sideRight 1s ease forwards;
+  animation-delay: 1s;
 }
 
 .home-content p {
   font-size: 20px;
+  opacity: 0;
+  animation: sideLeft 1s ease forwards;
 }
 
 .home-sci a {
@@ -98,6 +108,10 @@ body {
   font-size: 20px;
   color: #0ef;
   text-decoration: none;
+  opacity: 0;
+  animation: sideLeft 1s ease forwards;
+  transition: 0.5s ease;
+  animation-delay: calc(0.2s * var);
   margin: 30px 15px 30px 0;
 }
 
@@ -122,4 +136,46 @@ body {
 .btn-box:hover {
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef, 0 0 50px #0ef, 0 0 100px #0ef,
     0 0 200px #0ef;
+}
+
+@keyframes sideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes sideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes sideTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes sideBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
