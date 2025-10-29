@@ -209,6 +209,46 @@ body {
   animation-delay: 0.9s;
 }
 
+#services {
+  color: white;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-bottom: 4rem;
+  background: #001a33;
+}
+
+.sub-title {
+  text-align: center;
+  font-size: 60px;
+  padding-bottom: 70px;
+}
+
+.sub-title span {
+  color: #0ef;
+}
+
+.container {
+  padding: 90px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: #001a33;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  border-right: 10px;
+  border-radius: 20px;
+  transition: background 0.5s ease;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.2);
+}
+
 @keyframes slideRight {
   0% {
     opacity: 0;
