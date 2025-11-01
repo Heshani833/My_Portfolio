@@ -387,105 +387,6 @@ body {
   font-weight: 600;
 }
 
-.Technical-bars {
-  width: 100%;
-}
-
-.Technical-bars .bar {
-  margin-bottom: 25px;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 15px;
-  border-radius: 5px;
-  box-shadow: 0 4px 15px rgba(0, 238, 255, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.Technical-bars .bar:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 238, 255, 0.2);
-}
-
-.Technical-bars .bar i {
-  font-size: 35px;
-  margin-right: 12px;
-  vertical-align: middle;
-}
-
-.Technical-bars .bar .info {
-  display: inline-block;
-  vertical-align: middle;
-  margin-bottom: 10px;
-}
-
-.Technical-bars .bar .info span {
-  font-size: 16px;
-  font-weight: 600;
-  color: #fff;
-  animation: showText 0.5s 1s linear forwards;
-  opacity: 0;
-}
-
-@keyframes showText {
-  100% {
-    opacity: 1;
-  }
-}
-
-.Technical-bars .bar .progress-line {
-  position: relative;
-  border-radius: 4px;
-  width: 100%;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
-  animation: growBar 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-@keyframes growBar {
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-.Technical-bars .bar .progress-line span {
-  height: 100%;
-  background: linear-gradient(90deg, #0ef 0%, #00d4ff 100%);
-  position: absolute;
-  border-radius: 4px;
-  box-shadow: 0 0 10px #0ef;
-  animation: fillBar 1.5s 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-  transform: scaleX(0);
-  transform-origin: left;
-}
-
-@keyframes fillBar {
-  100% {
-    transform: scaleX(1);
-  }
-}
-
-.progress-line.html span {
-  width: 90%;
-}
-
-.progress-line.css span {
-  width: 85%;
-}
-
-.progress-line.JavaScript span {
-  width: 80%;
-}
-
-.progress-line.Python span {
-  width: 75%;
-}
-
-.progress-line.React span {
-  width: 70%;
-}
-
 .radial-bars-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -594,7 +495,6 @@ body {
   white-space: nowrap;
 }
 
-/* Responsive Design */
 @media (max-width: 968px) {
   .skills-container {
     grid-template-columns: 1fr;
@@ -607,6 +507,146 @@ body {
 
   .radial-bars-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.skill-badges {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.skill-category h3 {
+  font-size: 18px;
+  color: #cfeffd;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #061021;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.badge.javascript {
+  background: #f7df1e;
+  color: #000;
+}
+.badge.typescript {
+  background: #007acc;
+  color: #fff;
+}
+.badge.html {
+  background: #e34f26;
+  color: #fff;
+}
+.badge.css {
+  background: #264de4;
+  color: #fff;
+}
+.badge.react {
+  background: #61dafb;
+  color: #000;
+}
+.badge.tailwind {
+  background: #38b2ac;
+  color: #fff;
+}
+.badge.bootstrap {
+  background: #7a2b86;
+  color: #fff;
+}
+.badge.node {
+  background: #3c873a;
+  color: #fff;
+}
+.badge.firebase {
+  background: #ffca28;
+  color: #000;
+}
+.badge.mongodb {
+  background: #3fa037;
+  color: #fff;
+}
+.badge.mysql {
+  background: #0d6efd;
+  color: #fff;
+}
+.badge.git {
+  background: #f34f29;
+  color: #fff;
+}
+.badge.github {
+  background: #111;
+  color: #fff;
+}
+.badge.postman {
+  background: #ff6c37;
+  color: #fff;
+}
+.badge.vscode {
+  background: #007acc;
+  color: #fff;
+}
+.badge.leetcode {
+  background: #ff9b1a;
+  color: #fff;
+}
+.badge.hackerrank {
+  background: #2ea44f;
+  color: #fff;
+}
+.badge.codechef {
+  background: #6b4b25;
+  color: #fff;
+}
+.badge.python {
+  background: #3776ab;
+  color: #fff;
+}
+.badge.php {
+  background: #777bb4;
+  color: #fff;
+}
+.badge.java {
+  background: #f89820;
+  color: #fff;
+}
+.badge.c {
+  background: #6c757d;
+  color: #fff;
+}
+.badge.linux {
+  background: #f0c419;
+  color: #000;
+}
+.badge.windows {
+  background: #0078d7;
+  color: #fff;
+}
+
+@media (max-width: 520px) {
+  .badge {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+  .skill-badges {
+    grid-template-columns: 1fr;
   }
 }
 
