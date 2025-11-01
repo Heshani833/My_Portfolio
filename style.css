@@ -147,6 +147,53 @@ body {
     0 0 200px #0ef;
 }
 
+.home-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation-delay: 2s, 3s;
+}
+
+.home-img img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #0ef;
+  box-shadow: 0 0 25px #0ef, 0 0 50px #0ef, 0 0 75px #0ef;
+  transition: 0.5s ease;
+}
+
+.home-img img:hover {
+  box-shadow: 0 0 35px #0ef, 0 0 70px #0ef, 0 0 100px #0ef, 0 0 150px #0ef;
+  transform: scale(1.05);
+}
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-24px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 .about {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -308,7 +355,6 @@ body {
   min-height: 100vh;
 }
 
-/* Skills Section Layout */
 .container1 > .sub-title {
   text-align: center;
   margin-bottom: 60px;
@@ -318,7 +364,6 @@ body {
   margin-top: 0;
 }
 
-/* Two Column Layout for Skills */
 .skills-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -441,7 +486,6 @@ body {
   width: 70%;
 }
 
-/* Professional Skills - Radial Bars */
 .radial-bars-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -566,7 +610,6 @@ body {
   }
 }
 
-/* Portfolio Section */
 .portfolio {
   background: linear-gradient(135deg, #0a1628 0%, #162238 50%, #1a2d45 100%);
   padding: 80px 0;
@@ -712,7 +755,6 @@ body {
   font-size: 16px;
 }
 
-/* Portfolio Responsive */
 @media (max-width: 768px) {
   .portfolio-content {
     grid-template-columns: 1fr;
