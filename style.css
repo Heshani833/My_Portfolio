@@ -304,25 +304,46 @@ body {
 
 .container1 {
   background: linear-gradient(135deg, #001a33 0%, #002147 50%, #003366 100%);
-  padding: 90px;
+  padding: 60px 90px;
   min-height: 100vh;
+}
+
+/* Skills Section Layout */
+.container1 > .sub-title {
   text-align: center;
+  margin-bottom: 60px;
+}
+
+.container1 > .heading1:first-of-type {
+  margin-top: 0;
+}
+
+/* Two Column Layout for Skills */
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-column {
+  flex: 1;
 }
 
 .heading1 {
-  text-align: center;
+  text-align: left;
   text-decoration: underline;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 5px;
-  font-size: 40px;
-  color: #0ef;
-  margin-bottom: 50px;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 40px;
   font-weight: 600;
 }
 
 .Technical-bars {
-  max-width: 700px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .Technical-bars .bar {
@@ -420,11 +441,19 @@ body {
   width: 70%;
 }
 
+/* Professional Skills - Radial Bars */
+.radial-bars-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 40px;
+}
+
 .radial-bars {
-  width: 150px;
-  height: 150px;
-  margin: 20px;
-  display: inline-block;
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: block;
   position: relative;
 }
 
@@ -444,20 +473,59 @@ body {
   stroke-dashoffset: 0;
 }
 
-.radial-bars .progress-path-1 {
-  stroke-width: 8;
+.radial-bars .progress-path-1,
+.radial-bars .progress-path-2,
+.radial-bars .progress-path-3,
+.radial-bars .progress-path-4 {
+  stroke-width: 10;
   stroke: #0ef;
   fill: none;
-  stroke-dasharray: 440;
-  stroke-dashoffset: 440;
+  stroke-dasharray: 502;
+  stroke-dashoffset: 502;
   stroke-linecap: round;
-  animation: radial-animate 2s ease-in-out forwards;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
   animation-delay: 0.5s;
 }
 
-@keyframes radial-animate {
+.radial-bars .progress-path-1 {
+  animation-name: radial-animate-90;
+}
+
+.radial-bars .progress-path-2 {
+  animation-name: radial-animate-65;
+}
+
+.radial-bars .progress-path-3 {
+  animation-name: radial-animate-75;
+}
+
+.radial-bars .progress-path-4 {
+  animation-name: radial-animate-85;
+}
+
+@keyframes radial-animate-90 {
   100% {
-    stroke-dashoffset: 66;
+    stroke-dashoffset: 50;
+  }
+}
+
+@keyframes radial-animate-65 {
+  100% {
+    stroke-dashoffset: 175;
+  }
+}
+
+@keyframes radial-animate-75 {
+  100% {
+    stroke-dashoffset: 125;
+  }
+}
+
+@keyframes radial-animate-85 {
+  100% {
+    stroke-dashoffset: 75;
   }
 }
 
@@ -473,13 +541,29 @@ body {
 
 .radial-bars .text {
   position: absolute;
-  bottom: -25px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .skills-container {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .heading1 {
+    text-align: center;
+  }
+
+  .radial-bars-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @keyframes slideRight {
