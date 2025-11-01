@@ -104,88 +104,142 @@
         <div class="skills-column">
           <h1 class="heading1">Technical Skills</h1>
 
-          <div class="skill-badges">
-            <div class="skill-category">
+          <div class="skill-bars">
+            <!-- Colorful language / tech logos row -->
+            <div class="language-logos" aria-hidden="false">
+              <span class="logo-chip html" title="HTML5"
+                ><i class="bx bxl-html5"></i><span>HTML5</span></span
+              >
+              <span class="logo-chip css" title="CSS3"
+                ><i class="bx bxl-css3"></i><span>CSS3</span></span
+              >
+              <span class="logo-chip js" title="JavaScript"
+                ><i class="bx bxl-javascript"></i><span>JavaScript</span></span
+              >
+              <span class="logo-chip ts" title="TypeScript"
+                ><i class="bx bxl-typescript"></i><span>TypeScript</span></span
+              >
+              <span class="logo-chip python" title="Python"
+                ><i class="bx bxl-python"></i><span>Python</span></span
+              >
+              <span class="logo-chip java" title="Java"
+                ><i class="bx bxl-java"></i><span>Java</span></span
+              >
+              <span class="logo-chip c" title="C"
+                ><span class="initials">C</span><span>C</span></span
+              >
+              <span class="logo-chip php" title="PHP"
+                ><span class="initials">PHP</span><span>PHP</span></span
+              >
+              <span class="logo-chip react" title="React"
+                ><i class="bx bxl-react"></i><span>React</span></span
+              >
+              <span class="logo-chip node" title="Node.js"
+                ><i class="bx bxl-nodejs"></i><span>Node.js</span></span
+              >
+              <span class="logo-chip mongodb" title="MongoDB"
+                ><span class="initials">MDB</span><span>MongoDB</span></span
+              >
+            </div>
+            <div class="skill-row">
               <h3>Programming languages</h3>
-              <div class="badges">
-                <span class="badge" title="C">C</span>
-                <span class="badge php">PHP</span>
-                <span class="badge typescript"
-                  ><i class="bx bxl-typescript"></i> TS</span
-                >
-                <span class="badge javascript"
-                  ><i class="bx bxl-javascript"></i> JavaScript</span
-                >
-                <span class="badge java">Java</span>
-                <span class="badge python"
-                  ><i class="bx bxl-python"></i> Python</span
-                >
+              <div class="bars">
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-html5"></i> HTML</span
+                    ><span class="percent">95%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 95%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-css3"></i> CSS</span
+                    ><span class="percent">90%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 90%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-javascript"></i> JavaScript</span
+                    ><span class="percent">85%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 85%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-python"></i> Python</span
+                    ><span class="percent">75%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 75%"></span></div>
+                </div>
               </div>
             </div>
 
-            <div class="skill-category">
-              <h3>Frontend Development</h3>
-              <div class="badges">
-                <span class="badge html"
-                  ><i class="bx bxl-html5"></i> HTML5</span
-                >
-                <span class="badge css"><i class="bx bxl-css3"></i> CSS3</span>
-                <span class="badge react"
-                  ><i class="bx bxl-react"></i> React</span
-                >
-                <span class="badge tailwind">Tailwind CSS</span>
-                <span class="badge bootstrap">Bootstrap</span>
+            <div class="skill-row">
+              <h3>Frontend & Frameworks</h3>
+              <div class="bars">
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-react"></i> React</span
+                    ><span class="percent">80%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 80%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>Tailwind CSS</span><span class="percent">70%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 70%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>Bootstrap</span><span class="percent">75%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 75%"></span></div>
+                </div>
               </div>
             </div>
 
-            <div class="skill-category">
-              <h3>Backend Development</h3>
-              <div class="badges">
-                <span class="badge node"
-                  ><i class="bx bxl-nodejs"></i> Node.js</span
-                >
+            <div class="skill-row">
+              <h3>Backend & BaaS</h3>
+              <div class="bars">
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span><i class="bx bxl-nodejs"></i> Node.js</span
+                    ><span class="percent">78%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 78%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>Firebase</span><span class="percent">70%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 70%"></span></div>
+                </div>
               </div>
             </div>
 
-            <div class="skill-category">
-              <h3>Backend as a Service (BaaS)</h3>
-              <div class="badges">
-                <span class="badge firebase">Firebase</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Databases</h3>
-              <div class="badges">
-                <span class="badge mongodb">MongoDB</span>
-                <span class="badge mysql">MySQL</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Software &amp; Tools</h3>
-              <div class="badges">
-                <span class="badge git">Git</span>
-                <span class="badge github">GitHub</span>
-                <span class="badge postman">Postman</span>
-                <span class="badge vscode">Visual Studio Code</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Competitive Programming &amp; Problem Solving</h3>
-              <div class="badges">
-                <span class="badge leetcode">LeetCode</span>
-                <span class="badge hackerrank">HackerRank</span>
-                <span class="badge codechef">CodeChef</span>
-              </div>
-            </div>
-
-            <div class="skill-category">
-              <h3>Operating Systems</h3>
-              <div class="badges">
-                <span class="badge linux">Linux</span>
-                <span class="badge windows">Windows</span>
+            <div class="skill-row">
+              <h3>Databases & Tools</h3>
+              <div class="bars">
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>MongoDB</span><span class="percent">72%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 72%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>MySQL</span><span class="percent">68%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 68%"></span></div>
+                </div>
+                <div class="bar-item">
+                  <div class="bar-label">
+                    <span>Git</span><span class="percent">90%</span>
+                  </div>
+                  <div class="bar"><span style="--w: 90%"></span></div>
+                </div>
               </div>
             </div>
           </div>
