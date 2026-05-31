@@ -1,8 +1,16 @@
+/* === FONT IMPORT === */
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Headings use the display font */
+h1, h2, h3, h4, .logo, .navbar a {
+  font-family: 'Syne', sans-serif;
 }
 
 body {
@@ -35,6 +43,11 @@ body {
   animation: slideRight 1s ease forwards;
 }
 
+/* Header shadow when page is scrolled */
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 238, 255, 0.1);
+}
+
 .navbar a {
   display: inline-block;
   font-size: 25px;
@@ -48,7 +61,8 @@ body {
   animation-delay: calc(0.2s * var(--i));
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar a.active {
   color: #0ef;
 }
 
@@ -57,8 +71,7 @@ body {
   width: 100%;
   justify-content: space-between;
   height: 100vh;
-  background: url(https://files.123freevectors.com/wp-content/original/148077-abstract-glowing-cool-blue-wave-background-design.jpg)
-    no-repeat;
+  background: url(../assets/images/hero-bg.jpg) no-repeat, linear-gradient(135deg, #0a0e27 0%, #051129 100%);
   background-position: center;
   display: flex;
   align-items: center;
@@ -76,13 +89,13 @@ body {
   font-weight: 700;
   opacity: 0;
   animation: slideBottom 0.5s ease forwards;
-  animation-delay: 0.7s;
+  animation-delay: 0.2s;
 }
 
 .home-content h3:nth-of-type(2) {
   margin-bottom: 30px;
   animation: slideTop 0.5s ease forwards;
-  animation-delay: 0.7s;
+  animation-delay: 0.2s;
 }
 
 .home-content h3 span {
@@ -95,7 +108,7 @@ body {
   margin: -3px 0;
   opacity: 0;
   animation: slideRight 1s ease forwards;
-  animation-delay: 1s;
+  animation-delay: 0.4s;
 }
 
 .home-content p {
@@ -141,7 +154,7 @@ body {
   font-weight: 600;
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 0.8s;
   box-shadow: 0 0 5px #0ae, 0 0 15px #0ae, 0 0 30px #0ae;
 }
 
@@ -156,7 +169,7 @@ body {
   align-items: center;
   opacity: 0;
   animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
-  animation-delay: 2s, 3s;
+  animation-delay: 0.6s, 1.6s;
     margin-left: auto;
 
 }
@@ -174,6 +187,44 @@ body {
 .home-img img:hover {
   box-shadow: 0 0 35px #0ef, 0 0 70px #0ef, 0 0 100px #0ef, 0 0 150px #0ef;
   transform: scale(1.05);
+}
+
+/* === MOBILE HERO FIX === */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 100px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .home-content {
+    max-width: 100%;
+  }
+
+  .home-content h1 {
+    font-size: 36px;
+  }
+
+  .home-content h3 {
+    font-size: 22px;
+  }
+
+  .home-img {
+    margin-left: 0;
+  }
+
+  .home-img img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .home-sci {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 }
 
 .about {
@@ -473,7 +524,7 @@ body {
 }
 
 .container {
-  padding: 90px;
+  padding: 90px 100px;
 }
 
 .services {
@@ -484,14 +535,15 @@ body {
 
 .services-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
-  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 60px;
+  row-gap: 40px;
   margin-top: 50px;
 }
 
 .services-list div {
   background: linear-gradient(145deg, #001a33 0%, #002147 100%);
-  padding: 40px;
+  padding: 24px 28px;
   font-size: 13px;
   font-weight: 600;
   border-radius: 20px;
@@ -501,14 +553,14 @@ body {
 }
 
 .services-list div i {
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 40px;
+  margin-bottom: 16px;
 }
 
 .services-list div h2 {
-  font-size: 30px;
-  font-weight: 500;
-  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 12px;
 }
 
 .services-list div a {
@@ -531,8 +583,33 @@ body {
   font-weight: 600;
   opacity: 0;
   animation: slideTop 1s ease forwards;
-  animation-delay: 2s;
+  animation-delay: 0.8s;
   box-shadow: 0 0 5px #0ae, 0 0 15px #0ae, 0 0 30px #0ae;
+}
+
+/* CV Download button — outlined style */
+.btn-box-outline {
+  display: inline-block;
+  padding: 10px 28px;
+  background: transparent;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #0ef;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #0ef;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  animation-delay: 1s;
+  transition: all 0.3s ease;
+  margin-left: 12px;
+}
+
+.btn-box-outline:hover {
+  background: #0ef;
+  color: #000;
+  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef, 0 0 50px #0ef;
 }
 .read:hover {
   box-shadow: 0 0 5px #0ef, 0 0 25px #0ef, 0 0 50px #0ef, 0 0 100px #0ef,
@@ -1984,5 +2061,160 @@ body {
   .contact-form form {
     padding: 20px;
     gap: 15px;
+  }
+}
+/* ── Equal-height service cards ── */
+.services-list {
+  align-items: stretch !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.services-list div {
+  display: flex;
+  flex-direction: column;
+}
+
+.services-list div p {
+  flex: 1;
+}
+
+/* ── Service tech tags ── */
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.stag {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 238, 255, 0.08);
+  color: #0ef;
+  border: 1px solid rgba(0, 238, 255, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ── Enhanced skills grid: 5 cards, 3+2 layout ── */
+.skills-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+}
+
+.skill-category-card:nth-child(4),
+.skill-category-card:nth-child(5) {
+  grid-column: span 1;
+}
+
+/* Centre the last row of 2 cards */
+.skill-category-card:nth-child(4) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.skill-category-card:nth-child(5) {
+  margin-right: auto;
+  margin-left: 0;
+}
+
+/* 5th card animation delay */
+.skill-category-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Make last 2 cards row centred */
+.skills-grid {
+  justify-items: stretch;
+}
+
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .skill-category-card:nth-child(4),
+  .skill-category-card:nth-child(5) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ══ SERVICE CARDS: equal height + tags ══ */
+.services-list {
+  align-items: stretch !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  column-gap: 60px !important;
+  row-gap: 40px !important;
+}
+
+.services-list div {
+  display: flex;
+  flex-direction: column;
+  min-height: unset;
+}
+
+.services-list div p {
+  flex: 1;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #bbb;
+}
+
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.stag {
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  background: rgba(0, 238, 255, 0.08);
+  color: #0ef;
+  border: 1px solid rgba(0, 238, 255, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+/* ══ SKILLS GRID: 3+2 layout ══ */
+.skills-grid {
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 28px !important;
+}
+
+.skill-category-card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+/* Last row of 2 — centred */
+.skills-grid::after {
+  content: '';
+}
+
+@media (max-width: 1200px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .services-list {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .services-list {
+    grid-template-columns: 1fr !important;
+  }
+  .services-list div {
+    min-height: auto;
   }
 }
