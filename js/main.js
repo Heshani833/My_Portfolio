@@ -1,6 +1,6 @@
 /* ── Typed.js hero text ── */
 var typed = new Typed(".text", {
-  strings: ["Full Stack Developer", "React & .NET Developer", "Python & AI Developer"],
+  strings: ["Software Engineer", "Full Stack Developer", "Frontend Developer", "Backend Developer", "UI/UX Developer"],
   typeSpeed: 70,
   backSpeed: 50,
   backDelay: 1500,
